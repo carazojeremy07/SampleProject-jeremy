@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2023 at 11:04 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Mar 31, 2023 at 02:14 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,17 +32,10 @@ CREATE TABLE `tbl_patient` (
   `p_name` varchar(50) NOT NULL,
   `p_add` varchar(100) NOT NULL,
   `p_stat` varchar(20) NOT NULL,
-  `p_gender` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tbl_patient`
---
-
-INSERT INTO `tbl_patient` (`p_id`, `p_name`, `p_add`, `p_stat`, `p_gender`) VALUES
-(1, 'Christine ', 'Dumanjug,Cebu', 'Single', 'Female'),
-(2, 'Charlie Go', 'Mandaue,Cebu City', 'Married', 'Male'),
-(3, 'John Conrado Navarez', 'Camirines,Sur', 'Single', 'Male');
+  `p_gender` varchar(20) NOT NULL,
+  `p_guardian` varchar(50) NOT NULL,
+  `p_phoneNum` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -62,7 +55,7 @@ ALTER TABLE `tbl_patient`
 -- AUTO_INCREMENT for table `tbl_patient`
 --
 ALTER TABLE `tbl_patient`
-  MODIFY `p_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `p_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
